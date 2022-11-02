@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" >
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{movie.image.url}}" height="300" width="300">
+    </div>
+<div class="col-md-6">
+  <h6>{{movie.name}}</h6>
+  <h6>{{movie.desc}}</h4>
+  <h6>{{movie.year}}</h6>
+  <a class="btn btn-warning" href="{% url 'moviesapp:update' movie.id %}"> update</a>
+  <a class="btn btn-danger" href="{% url 'moviesapp:delete' movie.id %}"> delete</a>
+
+</div>
+
+
+
+    </div>
+</div>
+{% endblock %}
+
+
+
+  # 7th line- 'appname' colon name given in url page , variable name dot id
